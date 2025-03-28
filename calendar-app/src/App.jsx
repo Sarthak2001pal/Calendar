@@ -10,12 +10,18 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/calendar" element={<Calendar />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
+      <div style={{
+        paddingTop: "60px", // Match the height of your fixed header
+        minHeight: "calc(100vh - 60px)", // Ensure full viewport height
+        backgroundColor: "#121212" // Match the dark mode background
+      }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/calendar" element={<Calendar />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </div>
     </Router>
   );
 };
